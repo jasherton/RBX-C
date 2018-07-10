@@ -1,2 +1,3 @@
 # RBX-C
-Discord Server: discord.gg/bny94uE
+Discord Server: discord.gg/
+Version 4.1
