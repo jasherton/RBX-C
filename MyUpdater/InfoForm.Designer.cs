@@ -1,6 +1,6 @@
-﻿namespace SharpUpdate
+﻿namespace MyUpdater
 {
-    partial class SharpUpdateInfoForm
+    partial class InfoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoForm));
             this.CloseOut = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.Label();
             this.apply = new System.Windows.Forms.Button();
+            this.versionlabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CloseOut
@@ -70,20 +72,33 @@
             this.apply.UseVisualStyleBackColor = true;
             this.apply.Click += new System.EventHandler(this.apply_Click);
             // 
-            // SharpUpdateInfoForm
+            // versionlabel
+            // 
+            this.versionlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.versionlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.versionlabel.ForeColor = System.Drawing.Color.White;
+            this.versionlabel.Location = new System.Drawing.Point(147, 48);
+            this.versionlabel.Name = "versionlabel";
+            this.versionlabel.Size = new System.Drawing.Size(101, 23);
+            this.versionlabel.TabIndex = 8;
+            this.versionlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // InfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(260, 430);
             this.ControlBox = false;
+            this.Controls.Add(this.versionlabel);
             this.Controls.Add(this.apply);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.CloseOut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SharpUpdateInfoForm";
-            this.Text = "SharpUpdateInfoForm";
-            this.Load += new System.EventHandler(this.SharpUpdateInfoForm_Load);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "InfoForm";
+            this.Text = "Update Information";
+            this.Load += new System.EventHandler(this.InfoForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SharpUpdateInfoForm_MouseDown);
             this.ResumeLayout(false);
 
@@ -94,5 +109,6 @@
         private System.Windows.Forms.Button CloseOut;
         private System.Windows.Forms.Label txtDescription;
         private System.Windows.Forms.Button apply;
+        private System.Windows.Forms.Label versionlabel;
     }
 }

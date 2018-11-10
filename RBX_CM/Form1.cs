@@ -12,29 +12,29 @@ using System.Windows.Forms;
 using static RBX_C.Functions;
 using System.Net.Http;
 using System.IO;
-using SharpUpdate;
+using MyUpdater;
 using System.Reflection;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
 
 namespace RBX_C
 {
-    public partial class Form1 : Form, ISharpUpdatable
+    public partial class Form1 : Form, UpdateInfo
     {
-        private SharpUpdater updater;
+        //private Updater AppUpdater;
 
         public Form1()
         {
             InitializeComponent();
-            updater = new SharpUpdater(this);
-            updater.DoUpdate();
+           // AppUpdater = new Updater(this);
+           // AppUpdater.DoUpdate();
         }
 
         public string ApplicationName
         {
             get
             {
-                return "RBX_CM";
+                return "RBX_C";
             }
         }
 
@@ -42,7 +42,7 @@ namespace RBX_C
         {
             get
             {
-                return "RBX_CM";
+                return "RBX_C";
             }
         }
 
@@ -67,6 +67,17 @@ namespace RBX_C
             get
             {
                 return this;
+            }
+        }
+
+        //timer setup
+        Timer ticker = new Timer();
+
+        public Timer tick
+        {
+            get
+            {
+                return ticker;
             }
         }
 
@@ -110,6 +121,9 @@ namespace RBX_C
             ShowBrowser();
             Browser.Hide();
             SetDocumentStream(Browser);
+            //run timer for auto-update
+            tick.Interval = 1000;
+            tick.Start();
         }
 
         private void ListButton_Click(object sender, EventArgs e)
@@ -344,5 +358,9 @@ namespace RBX_C
             }
         }
 
+        private void ListInfo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

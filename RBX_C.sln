@@ -4,8 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBX_C", "RBX_CM\RBX_C.csproj", "{F5D5161C-8A9E-4F9D-8ACF-550857148379}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2C3C93A5-0E41-4CEC-9DD5-5CC68F691CE2} = {2C3C93A5-0E41-4CEC-9DD5-5CC68F691CE2}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpUpdate", "SharpUpdate\SharpUpdate.csproj", "{886CEA47-1FDB-4A4D-9688-608DAF9EEB21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyUpdater", "MyUpdater\MyUpdater.csproj", "{2C3C93A5-0E41-4CEC-9DD5-5CC68F691CE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +20,10 @@ Global
 		{F5D5161C-8A9E-4F9D-8ACF-550857148379}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5D5161C-8A9E-4F9D-8ACF-550857148379}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5D5161C-8A9E-4F9D-8ACF-550857148379}.Release|Any CPU.Build.0 = Release|Any CPU
-		{886CEA47-1FDB-4A4D-9688-608DAF9EEB21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{886CEA47-1FDB-4A4D-9688-608DAF9EEB21}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{886CEA47-1FDB-4A4D-9688-608DAF9EEB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{886CEA47-1FDB-4A4D-9688-608DAF9EEB21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C3C93A5-0E41-4CEC-9DD5-5CC68F691CE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C3C93A5-0E41-4CEC-9DD5-5CC68F691CE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C3C93A5-0E41-4CEC-9DD5-5CC68F691CE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C3C93A5-0E41-4CEC-9DD5-5CC68F691CE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

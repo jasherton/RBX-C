@@ -90,7 +90,7 @@ namespace RBX_C
                 //Get Client Directory
                 try
                 {
-                    client = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Roblox\\Versions\\" + webclient.DownloadString("http://setup.roblox.com/version") + "\\";
+                    client = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\Roblox\\Versions\\" + webclient.DownloadString("http://setup.roblox.com/version") + "\\";
                 }
                 catch
                 {
@@ -100,7 +100,7 @@ namespace RBX_C
                 //Get Studio Directory
                 try
                 {
-                    studio = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Roblox\\Versions\\" + webclient.DownloadString("http://setup.roblox.com/versionQTStudio") + "\\";
+                    studio = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + "\\Roblox\\Versions\\" + webclient.DownloadString("http://setup.roblox.com/versionQTStudio") + "\\";
                 }
                 catch
                 {
@@ -171,8 +171,8 @@ namespace RBX_C
             //{
             siteinfo = new Dictionary<string, string>
                     {
-                        { "Main", "http://24.14.6.117/jjelamb/"},
-                        { "Home", "http://24.14.6.117/jjelamb/RBX-CM/home.html"},
+                        { "Main", "http://jjelamb.com/"},
+                        { "Home", "http://jjelamb.com/RBX-C/home.html"},
                     };
             //}
 
@@ -225,7 +225,6 @@ namespace RBX_C
             {
                 HttpWebRequest request = WebRequest.CreateHttp(site);
                 request.Timeout = 1000;
-                request.Proxy = setProxy();
                 request.UserAgent = "Mozilla/5.0 (Linux; U; Android 4.0.4; pt-br; MZ608 Build/7.7.1-141-7-FLEM-UMTS-LA) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30";
                 WebResponse response = request.GetResponse();
                 return response;
@@ -384,7 +383,6 @@ namespace RBX_C
                     HttpWebRequest request = (HttpWebRequest)WebRequest.Create(siteinfo["Main"] + "RBX-C/phpget.php");
                     request.Method = "POST";
                     request.Timeout = 1000;
-                    request.Proxy = setProxy();
                     request.UserAgent = "Mozilla/5.0 (Linux; U; Android 4.0.4; pt-br; MZ608 Build/7.7.1-141-7-FLEM-UMTS-LA) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30";
 
                     byte[] contents = await content.ReadAsByteArrayAsync();
@@ -488,8 +486,7 @@ namespace RBX_C
                 try
                 {
                     Dictionary<string, string> siteinfo = ReturnSiteInfo();
-                    var proxy = setProxy();
-                    Functions.FormUpload.MultipartFormDataPost(siteinfo["Main"] + "RBX-C/uploadaudio.php", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36", proxy, content);
+                    Functions.FormUpload.MultipartFormDataPost(siteinfo["Main"] + "RBX-C/uploadaudio.php", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36", null, content);
                     return;
 
                 }

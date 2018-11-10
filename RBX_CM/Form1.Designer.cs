@@ -167,6 +167,7 @@
             this.ListInfo.Size = new System.Drawing.Size(720, 418);
             this.ListInfo.TabIndex = 9;
             this.ListInfo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListInfo_MouseClick);
+            this.ListInfo.SelectedIndexChanged += new System.EventHandler(this.ListInfo_SelectedIndexChanged);
             // 
             // Download
             // 

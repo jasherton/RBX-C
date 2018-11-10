@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SharpUpdate")]
+[assembly: AssemblyTitle("MyUpdater")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SharpUpdate")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyProduct("MyUpdater")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("886cea47-1fdb-4a4d-9688-608daf9eeb21")]
+[assembly: Guid("2c3c93a5-0e41-4cec-9dd5-5cc68f691ce2")]
 
 // Version information for an assembly consists of the following four values:
 //
